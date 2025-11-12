@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Watermark from './components/Watermark';
 import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
@@ -34,6 +35,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Watermark />
       </div>
     </Router>
   );
