@@ -121,7 +121,7 @@ const Gallery = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/images/gallery-hero.jpg')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop')",
           }}
         />
         <div className="hero-overlay" />

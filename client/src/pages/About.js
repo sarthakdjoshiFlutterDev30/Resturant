@@ -59,7 +59,7 @@ const About = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/images/about-hero.jpg')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop')",
           }}
         />
         <div className="hero-overlay" />
@@ -123,12 +123,9 @@ const About = () => {
             </div>
             <div data-aos="fade-left" className="relative">
               <img
-                src="/images/restaurant-history.jpg"
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop"
                 alt="Restaurant History"
                 className="rounded-lg shadow-2xl w-full h-96 object-cover"
-                onError={(e) => {
-                  e.target.src = `https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&crop=center`;
-                }}
               />
             </div>
           </div>

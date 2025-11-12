@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] opacity-5 bg-cover bg-center"></div>
+      <div className="absolute inset-0 opacity-5 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop')"}}></div>
       <div className="container-custom section-padding relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Restaurant Info */}

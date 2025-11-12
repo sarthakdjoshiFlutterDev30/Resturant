@@ -184,7 +184,7 @@ const Menu = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/images/menu-hero.jpg')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop')",
           }}
         />
         <div className="hero-overlay" />

@@ -68,7 +68,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed scale-105"
           style={{
-            backgroundImage: "url('/images/hero-bg.jpg')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop')",
           }}
         />
         <div className="hero-overlay" />
@@ -221,12 +221,9 @@ const Home = () => {
             <div data-aos="fade-left" className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent-400 to-gold-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
               <img
-                src="/images/restaurant-interior.jpg"
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop"
                 alt="Restaurant Interior"
                 className="relative rounded-2xl shadow-2xl w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
-                onError={(e) => {
-                  e.target.src = `https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=center`;
-                }}
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center shadow-glow-lg transform rotate-6 hover:rotate-12 transition-transform duration-300">
                 <div className="text-center text-white">
@@ -282,7 +279,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-br from-dark-900 via-dark-800 to-accent-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop')"}}></div>
         <div className="container-custom text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
