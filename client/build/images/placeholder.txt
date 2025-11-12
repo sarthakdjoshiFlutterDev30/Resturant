@@ -1,0 +1,39 @@
+# Sample Images Directory
+
+This directory should contain the following images for the restaurant website:
+
+## Hero Images:
+- hero-bg.jpg (1920x1080) - Main hero background
+- about-hero.jpg (1920x600) - About page hero
+- menu-hero.jpg (1920x600) - Menu page hero  
+- gallery-hero.jpg (1920x600) - Gallery page hero
+- contact-hero.jpg (1920x600) - Contact page hero
+
+## Food Images:
+- truffle-risotto.jpg (600x400)
+- wagyu-beef.jpg (600x400)
+- salmon.jpg (600x400)
+- chocolate-souffle.jpg (600x400)
+
+## Restaurant Images:
+- restaurant-interior.jpg (800x600)
+- restaurant-history.jpg (800x600)
+
+## Chef Images:
+- chef-marcus.jpg (400x500)
+- chef-isabella.jpg (400x500)
+- chef-hiroshi.jpg (400x500)
+
+## Gallery Images:
+- gallery/interior-1.jpg through interior-4.jpg
+- gallery/food-1.jpg through food-6.jpg
+- gallery/chef-1.jpg
+- gallery/kitchen-1.jpg
+
+Note: The website uses fallback images from Unsplash if local images are not found.
+All images should be optimized for web (compressed, appropriate format).
+
+Recommended image sources:
+- Unsplash.com (free high-quality photos)
+- Pexels.com (free stock photos)
+- Custom photography of actual restaurant
