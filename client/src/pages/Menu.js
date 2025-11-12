@@ -10,35 +10,35 @@ const Menu = () => {
         id: 1,
         name: "Oysters Rockefeller",
         description: "Fresh oysters with spinach, herbs, and hollandaise sauce",
-        price: "$18",
+        price: "₹1,440",
         dietary: ["gluten-free"]
       },
       {
         id: 2,
         name: "Foie Gras Terrine",
         description: "House-made foie gras with brioche toast and fig compote",
-        price: "$24",
+        price: "₹1,920",
         dietary: []
       },
       {
         id: 3,
         name: "Burrata Caprese",
         description: "Creamy burrata with heirloom tomatoes and basil oil",
-        price: "$16",
+        price: "₹1,280",
         dietary: ["vegetarian", "gluten-free"]
       },
       {
         id: 4,
         name: "Tuna Tartare",
         description: "Yellowfin tuna with avocado, citrus, and sesame",
-        price: "$22",
+        price: "₹1,760",
         dietary: ["gluten-free"]
       },
       {
         id: 5,
         name: "Escargot de Bourgogne",
         description: "Classic French snails in garlic herb butter",
-        price: "$19",
+        price: "₹1,520",
         dietary: ["gluten-free"]
       }
     ],
@@ -47,42 +47,42 @@ const Menu = () => {
         id: 6,
         name: "Wagyu Beef Tenderloin",
         description: "Premium wagyu with roasted vegetables and red wine reduction",
-        price: "$65",
+        price: "₹5,200",
         dietary: ["gluten-free"]
       },
       {
         id: 7,
         name: "Lobster Thermidor",
         description: "Whole lobster with cognac cream sauce and gruyere",
-        price: "$48",
+        price: "₹3,840",
         dietary: ["gluten-free"]
       },
       {
         id: 8,
         name: "Duck Confit",
         description: "Slow-cooked duck leg with cherry gastrique and potato gratin",
-        price: "$32",
+        price: "₹2,560",
         dietary: []
       },
       {
         id: 9,
         name: "Pan-Seared Salmon",
         description: "Atlantic salmon with lemon herb butter and seasonal vegetables",
-        price: "$28",
+        price: "₹2,240",
         dietary: ["gluten-free"]
       },
       {
         id: 10,
         name: "Truffle Risotto",
         description: "Creamy Arborio rice with black truffle and parmesan",
-        price: "$32",
+        price: "₹2,560",
         dietary: ["vegetarian", "gluten-free"]
       },
       {
         id: 11,
         name: "Rack of Lamb",
         description: "Herb-crusted lamb with ratatouille and rosemary jus",
-        price: "$42",
+        price: "₹3,360",
         dietary: []
       }
     ],
@@ -91,35 +91,35 @@ const Menu = () => {
         id: 12,
         name: "Chocolate Soufflé",
         description: "Rich dark chocolate soufflé with vanilla bean ice cream",
-        price: "$18",
+        price: "₹1,440",
         dietary: ["vegetarian"]
       },
       {
         id: 13,
         name: "Crème Brûlée",
         description: "Classic vanilla custard with caramelized sugar",
-        price: "$14",
+        price: "₹1,120",
         dietary: ["vegetarian", "gluten-free"]
       },
       {
         id: 14,
         name: "Tarte Tatin",
         description: "Upside-down apple tart with cinnamon ice cream",
-        price: "$16",
+        price: "₹1,280",
         dietary: ["vegetarian"]
       },
       {
         id: 15,
         name: "Tiramisu",
         description: "Traditional Italian dessert with espresso and mascarpone",
-        price: "$15",
+        price: "₹1,200",
         dietary: ["vegetarian"]
       },
       {
         id: 16,
         name: "Lemon Posset",
         description: "Silky lemon cream with shortbread cookies",
-        price: "$12",
+        price: "₹960",
         dietary: ["vegetarian"]
       }
     ],
@@ -128,35 +128,35 @@ const Menu = () => {
         id: 17,
         name: "House Wine Selection",
         description: "Curated selection of red, white, and rosé wines",
-        price: "$12-45",
+        price: "₹960-3,600",
         dietary: []
       },
       {
         id: 18,
         name: "Craft Cocktails",
         description: "Signature cocktails crafted by our mixologists",
-        price: "$14-18",
+        price: "₹1,120-1,440",
         dietary: []
       },
       {
         id: 19,
         name: "Artisan Coffee",
         description: "Single-origin coffee beans, expertly roasted",
-        price: "$6-8",
+        price: "₹480-640",
         dietary: ["vegan"]
       },
       {
         id: 20,
         name: "Premium Tea Selection",
         description: "Loose-leaf teas from around the world",
-        price: "$5-7",
+        price: "₹400-560",
         dietary: ["vegan"]
       },
       {
         id: 21,
         name: "Fresh Juices",
         description: "Seasonal fruit and vegetable juices",
-        price: "$8-10",
+        price: "₹640-800",
         dietary: ["vegan", "gluten-free"]
       }
     ]
@@ -320,9 +320,9 @@ const Menu = () => {
                   </ul>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-gold-600 mb-2">$125</div>
+                  <div className="text-4xl font-bold text-gold-600 mb-2">₹10,000</div>
                   <p className="text-primary-600 mb-4">per person</p>
-                  <div className="text-3xl font-bold text-gold-600 mb-2">$185</div>
+                  <div className="text-3xl font-bold text-gold-600 mb-2">₹14,800</div>
                   <p className="text-primary-600">with wine pairing</p>
                 </div>
               </div>

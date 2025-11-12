@@ -8,28 +8,28 @@ const Home = () => {
       id: 1,
       name: "Truffle Risotto",
       description: "Creamy Arborio rice with black truffle, parmesan, and wild mushrooms",
-      price: "$32",
+      price: "₹2,560",
       image: "/images/truffle-risotto.jpg"
     },
     {
       id: 2,
       name: "Wagyu Beef Tenderloin",
       description: "Premium wagyu beef with roasted vegetables and red wine reduction",
-      price: "$65",
+      price: "₹5,200",
       image: "/images/wagyu-beef.jpg"
     },
     {
       id: 3,
       name: "Pan-Seared Salmon",
       description: "Atlantic salmon with lemon herb butter and seasonal vegetables",
-      price: "$28",
+      price: "₹2,240",
       image: "/images/salmon.jpg"
     },
     {
       id: 4,
       name: "Chocolate Soufflé",
       description: "Rich dark chocolate soufflé with vanilla bean ice cream",
-      price: "$18",
+      price: "₹1,440",
       image: "/images/chocolate-souffle.jpg"
     }
   ];
