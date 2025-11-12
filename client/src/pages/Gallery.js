@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Gallery = () => {
@@ -263,13 +264,13 @@ const Gallery = () => {
               Visit us to immerse yourself in the ambiance, savor the flavors, 
               and create your own memorable moments.
             </p>
-            <div className="space-x-4">
-              <button className="btn-primary text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/contact" className="btn-primary text-lg w-full sm:w-auto">
                 Make a Reservation
-              </button>
-              <button className="btn-secondary text-lg">
+              </Link>
+              <Link to="/menu" className="btn-secondary text-lg w-full sm:w-auto">
                 View Menu
-              </button>
+              </Link>
             </div>
           </div>
         </div>

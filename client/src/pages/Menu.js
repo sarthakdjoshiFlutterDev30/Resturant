@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Menu = () => {
@@ -327,9 +328,9 @@ const Menu = () => {
                 </div>
               </div>
             </div>
-            <button className="btn-primary text-lg">
+            <Link to="/contact" className="btn-primary text-lg">
               Reserve Tasting Menu
-            </button>
+            </Link>
           </div>
         </div>
       </section>
