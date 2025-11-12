@@ -180,29 +180,40 @@ const Menu = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center">
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
             backgroundImage: "url('/images/menu-hero.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="hero-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-900/30 via-transparent to-dark-900/50" />
         
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
-          <motion.h1 
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-4"
+            className="mb-4"
           >
-            Our Menu
+            <span className="inline-block px-4 py-2 rounded-full glass-effect text-sm font-semibold">
+              Our Menu
+            </span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6"
+          >
+            Culinary <span className="gradient-text">Excellence</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-lg sm:text-xl max-w-2xl mx-auto px-2"
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-xl sm:text-2xl max-w-2xl mx-auto px-2 text-white/90"
           >
             Discover our carefully crafted culinary creations
           </motion.p>
@@ -210,18 +221,18 @@ const Menu = () => {
       </section>
 
       {/* Menu Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-b from-white to-dark-50">
         <div className="container-custom">
           {/* Category Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+          <div className="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                   activeCategory === category.id
-                    ? 'bg-gold-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-primary-700 hover:bg-gold-100 hover:text-gold-700'
+                    ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg shadow-glow'
+                    : 'bg-white text-dark-700 hover:bg-accent-50 hover:text-accent-600 shadow-soft'
                 }`}
               >
                 <span className="text-xl">{category.icon}</span>
@@ -238,23 +249,23 @@ const Menu = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-playfair font-bold text-primary-900 mb-8 text-center">
+              <h2 className="text-4xl font-playfair font-bold text-dark-900 mb-10 text-center">
                 {categories.find(cat => cat.id === activeCategory)?.name}
               </h2>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {menuData[activeCategory].map((item, index) => (
                   <motion.div
                     key={item.id}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    className="card p-6 hover:shadow-xl group"
                   >
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start gap-6">
                       <div className="flex-1">
                         <div className="flex items-center space-x-2 mb-2">
-                          <h3 className="text-xl font-playfair font-semibold text-primary-900">
+                          <h3 className="text-xl font-playfair font-semibold text-dark-900 group-hover:text-accent-600 transition-colors">
                             {item.name}
                           </h3>
                           {item.dietary.length > 0 && (
@@ -263,7 +274,7 @@ const Menu = () => {
                             </span>
                           )}
                         </div>
-                        <p className="text-primary-600 leading-relaxed">
+                        <p className="text-dark-600 leading-relaxed">
                           {item.description}
                         </p>
                         {item.dietary.length > 0 && (
@@ -271,7 +282,7 @@ const Menu = () => {
                             {item.dietary.map((diet, idx) => (
                               <span
                                 key={idx}
-                                className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium"
+                                className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium"
                               >
                                 {diet}
                               </span>
@@ -279,8 +290,8 @@ const Menu = () => {
                           </div>
                         )}
                       </div>
-                      <div className="ml-6">
-                        <span className="text-2xl font-bold text-gold-600">
+                      <div className="ml-6 flex-shrink-0">
+                        <span className="text-2xl font-bold text-accent-600">
                           {item.price}
                         </span>
                       </div>
@@ -294,37 +305,40 @@ const Menu = () => {
       </section>
 
       {/* Chef's Special */}
-      <section className="section-padding bg-primary-50">
+      <section className="section-padding bg-gradient-to-br from-accent-50 via-white to-gold-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-4xl font-playfair font-bold text-primary-900 mb-6">
-              Chef's Tasting Menu
+            <span className="inline-block px-4 py-2 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
+              Chef's Special
+            </span>
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-dark-900 mb-6">
+              Chef's <span className="gradient-text">Tasting Menu</span>
             </h2>
-            <p className="text-lg text-primary-700 mb-8 leading-relaxed">
+            <p className="text-lg text-dark-600 mb-10 leading-relaxed">
               Experience our chef's creativity with a carefully curated 7-course tasting menu 
               that changes seasonally to showcase the finest ingredients.
             </p>
-            <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="card p-8 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-playfair font-semibold text-primary-900 mb-4">
+                  <h3 className="text-2xl font-playfair font-semibold text-dark-900 mb-6">
                     7-Course Experience
                   </h3>
-                  <ul className="text-left space-y-2 text-primary-600">
-                    <li>• Amuse-bouche</li>
-                    <li>• Seasonal appetizer</li>
-                    <li>• Soup or salad course</li>
-                    <li>• Fish course</li>
-                    <li>• Meat course</li>
-                    <li>• Cheese selection</li>
-                    <li>• Dessert & petit fours</li>
+                  <ul className="text-left space-y-3 text-dark-600">
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Amuse-bouche</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Seasonal appetizer</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Soup or salad course</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Fish course</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Meat course</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Cheese selection</li>
+                    <li className="flex items-center"><span className="text-accent-500 mr-3">•</span> Dessert & petit fours</li>
                   </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gold-600 mb-2">₹10,000</div>
-                  <p className="text-primary-600 mb-4">per person</p>
-                  <div className="text-3xl font-bold text-gold-600 mb-2">₹14,800</div>
-                  <p className="text-primary-600">with wine pairing</p>
+                <div className="text-center flex flex-col justify-center">
+                  <div className="text-5xl font-bold text-accent-600 mb-2">₹10,000</div>
+                  <p className="text-dark-600 mb-6">per person</p>
+                  <div className="text-4xl font-bold text-accent-600 mb-2">₹14,800</div>
+                  <p className="text-dark-600">with wine pairing</p>
                 </div>
               </div>
             </div>
@@ -339,33 +353,33 @@ const Menu = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-3xl font-playfair font-bold text-primary-900 mb-8">
-              Dietary Information
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-dark-900 mb-10">
+              Dietary <span className="gradient-text">Information</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 bg-green-50 rounded-lg">
-                <div className="text-3xl mb-3">🌱</div>
-                <h3 className="font-semibold text-primary-900 mb-2">Vegetarian</h3>
-                <p className="text-sm text-primary-600">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="card p-6 hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">🌱</div>
+                <h3 className="font-semibold text-dark-900 mb-2">Vegetarian</h3>
+                <p className="text-sm text-dark-600">
                   Made without meat, poultry, or fish
                 </p>
               </div>
-              <div className="p-6 bg-green-50 rounded-lg">
-                <div className="text-3xl mb-3">🌿</div>
-                <h3 className="font-semibold text-primary-900 mb-2">Vegan</h3>
-                <p className="text-sm text-primary-600">
+              <div className="card p-6 hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">🌿</div>
+                <h3 className="font-semibold text-dark-900 mb-2">Vegan</h3>
+                <p className="text-sm text-dark-600">
                   Made without any animal products
                 </p>
               </div>
-              <div className="p-6 bg-green-50 rounded-lg">
-                <div className="text-3xl mb-3">🌾</div>
-                <h3 className="font-semibold text-primary-900 mb-2">Gluten-Free</h3>
-                <p className="text-sm text-primary-600">
+              <div className="card p-6 hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">🌾</div>
+                <h3 className="font-semibold text-dark-900 mb-2">Gluten-Free</h3>
+                <p className="text-sm text-dark-600">
                   Made without wheat, barley, or rye
                 </p>
               </div>
             </div>
-            <p className="text-primary-600 mt-8 leading-relaxed">
+            <p className="text-dark-600 leading-relaxed">
               Please inform your server of any allergies or dietary restrictions. 
               Our kitchen team is happy to accommodate special requests whenever possible.
             </p>

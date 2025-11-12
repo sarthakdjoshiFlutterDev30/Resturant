@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,29 +9,43 @@
   }
   
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    @apply bg-white text-dark-800;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    @apply font-bold;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gold-600 hover:bg-gold-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold py-3.5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-glow active:scale-95;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-gold-600 text-gold-600 hover:bg-gold-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+    @apply bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3.5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border-2 border-accent-500 text-accent-600 hover:bg-accent-500 hover:text-white font-semibold py-3.5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-lg active:scale-95;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden;
+  }
+  
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-lg rounded-2xl shadow-soft border border-white/20;
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
@@ -39,23 +53,27 @@
   }
   
   .text-responsive-xl {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
   }
   
   .text-responsive-lg {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
   }
   
   .text-responsive-md {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
   
-  .grid-responsive {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-500 to-gold-500 bg-clip-text text-transparent;
   }
   
-  .flex-responsive {
-    @apply flex flex-col sm:flex-row;
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-dark-900/80 via-dark-900/60 to-dark-900/80;
   }
 }
 
@@ -82,4 +100,21 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-600;
 }

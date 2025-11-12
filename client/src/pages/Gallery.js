@@ -117,29 +117,40 @@ const Gallery = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center">
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
             backgroundImage: "url('/images/gallery-hero.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="hero-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-900/30 via-transparent to-dark-900/50" />
         
-        <div className="relative z-10 text-center text-white px-4">
-          <motion.h1 
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl md:text-6xl font-playfair font-bold mb-4"
+            className="mb-4"
           >
-            Gallery
+            <span className="inline-block px-4 py-2 rounded-full glass-effect text-sm font-semibold">
+              Gallery
+            </span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6"
+          >
+            Our <span className="gradient-text">Gallery</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-xl max-w-2xl mx-auto"
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-xl md:text-2xl max-w-2xl mx-auto text-white/90"
           >
             A visual journey through our culinary world
           </motion.p>
@@ -155,10 +166,10 @@ const Gallery = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                   activeFilter === filter.id
-                    ? 'bg-gold-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-primary-700 hover:bg-gold-100 hover:text-gold-700'
+                    ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg shadow-glow'
+                    : 'bg-white text-dark-700 hover:bg-accent-50 hover:text-accent-600 shadow-soft'
                 }`}
               >
                 <span className="text-xl">{filter.icon}</span>
@@ -253,13 +264,16 @@ const Gallery = () => {
       )}
 
       {/* Visit Us Section */}
-      <section className="section-padding bg-primary-50">
+      <section className="section-padding bg-gradient-to-b from-dark-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-4xl font-playfair font-bold text-primary-900 mb-6">
-              Experience It Yourself
+            <span className="inline-block px-4 py-2 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
+              Visit Us
+            </span>
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-dark-900 mb-6">
+              Experience It <span className="gradient-text">Yourself</span>
             </h2>
-            <p className="text-lg text-primary-700 mb-8 leading-relaxed">
+            <p className="text-lg text-dark-600 mb-8 leading-relaxed">
               These images only capture a glimpse of the full experience. 
               Visit us to immerse yourself in the ambiance, savor the flavors, 
               and create your own memorable moments.

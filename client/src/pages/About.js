@@ -55,29 +55,40 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center">
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
             backgroundImage: "url('/images/about-hero.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="hero-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-900/30 via-transparent to-dark-900/50" />
         
-        <div className="relative z-10 text-center text-white px-4">
-          <motion.h1 
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl md:text-6xl font-playfair font-bold mb-4"
+            className="mb-4"
           >
-            Our Story
+            <span className="inline-block px-4 py-2 rounded-full glass-effect text-sm font-semibold">
+              About Us
+            </span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6"
+          >
+            Our <span className="gradient-text">Story</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-xl max-w-2xl mx-auto"
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-xl md:text-2xl max-w-2xl mx-auto text-white/90"
           >
             A journey of culinary excellence and passion
           </motion.p>
@@ -89,20 +100,23 @@ const About = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
-              <h2 className="text-4xl font-playfair font-bold text-primary-900 mb-6">
-                The Beginning
+              <span className="inline-block px-4 py-2 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
+                Our Journey
+              </span>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-dark-900 mb-6">
+                The <span className="gradient-text">Beginning</span>
               </h2>
-              <p className="text-lg text-primary-700 mb-6 leading-relaxed">
+              <p className="text-lg text-dark-700 mb-6 leading-relaxed">
                 The Gourmet Table was born from a simple dream: to create a dining experience that 
                 transcends the ordinary. Founded in 2010 by culinary visionary James Morrison, 
                 our restaurant began as a small bistro with big ambitions.
               </p>
-              <p className="text-primary-600 mb-6 leading-relaxed">
+              <p className="text-dark-600 mb-6 leading-relaxed">
                 What started as a 20-seat establishment has grown into one of the city's most 
                 celebrated dining destinations, earning recognition from food critics and 
                 building a loyal following of discerning guests.
               </p>
-              <p className="text-primary-600 leading-relaxed">
+              <p className="text-dark-600 leading-relaxed">
                 Today, we continue to honor our founding principles: exceptional ingredients, 
                 masterful technique, and warm hospitality that makes every guest feel like family.
               </p>
@@ -125,10 +139,13 @@ const About = () => {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary-900 mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
               Our Values
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-dark-900 mb-6">
+              Our <span className="gradient-text">Values</span>
             </h2>
-            <p className="text-lg text-primary-700 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-600 max-w-2xl mx-auto leading-relaxed">
               The principles that guide everything we do at The Gourmet Table
             </p>
           </div>
@@ -143,10 +160,10 @@ const About = () => {
                 className="card p-8 text-center"
               >
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-playfair font-semibold text-primary-900 mb-4">
+                <h3 className="text-xl font-playfair font-semibold text-dark-900 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-primary-600 leading-relaxed">
+                <p className="text-dark-600 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -159,10 +176,13 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary-900 mb-4">
-              Meet Our Chefs
+            <span className="inline-block px-4 py-2 rounded-full bg-gold-100 text-gold-700 text-sm font-semibold mb-4">
+              Our Team
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-dark-900 mb-6">
+              Meet Our <span className="gradient-text">Chefs</span>
             </h2>
-            <p className="text-lg text-primary-700 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-600 max-w-2xl mx-auto leading-relaxed">
               The talented culinary artists behind every exceptional dish
             </p>
           </div>
@@ -187,14 +207,14 @@ const About = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-playfair font-bold text-primary-900 mb-2">
+                  <h3 className="text-2xl font-playfair font-bold text-dark-900 mb-2">
                     {chef.name}
                   </h3>
-                  <p className="text-gold-600 font-semibold mb-4">{chef.position}</p>
-                  <p className="text-primary-600 mb-4 leading-relaxed">{chef.bio}</p>
+                  <p className="text-accent-600 font-semibold mb-4">{chef.position}</p>
+                  <p className="text-dark-600 mb-4 leading-relaxed">{chef.bio}</p>
                   
                   <div>
-                    <h4 className="font-semibold text-primary-900 mb-2">Specialties:</h4>
+                    <h4 className="font-semibold text-dark-900 mb-2">Specialties:</h4>
                     <div className="flex flex-wrap gap-2">
                       {chef.specialties.map((specialty, idx) => (
                         <span
@@ -277,15 +297,18 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary-900 mb-8">
-              Our Philosophy
+            <span className="inline-block px-4 py-2 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
+              Philosophy
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-dark-900 mb-8">
+              Our <span className="gradient-text">Philosophy</span>
             </h2>
-            <blockquote className="text-2xl text-primary-700 italic leading-relaxed mb-8">
+            <blockquote className="text-2xl md:text-3xl text-dark-700 italic leading-relaxed mb-8">
               "Cooking is not just about feeding the body, but nourishing the soul. 
               Every dish we create is a story, every meal an experience, 
               and every guest a cherished part of our culinary journey."
             </blockquote>
-            <p className="text-lg text-primary-600">
+            <p className="text-lg text-accent-600 font-semibold">
               — James Morrison, Founder & Owner
             </p>
           </div>
