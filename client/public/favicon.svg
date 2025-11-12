@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#8B4513" stroke="#D4AF37" stroke-width="4"/>
+  
+  <!-- Fork -->
+  <g fill="#D4AF37">
+    <rect x="25" y="25" width="2" height="35" rx="1"/>
+    <rect x="23" y="25" width="6" height="3" rx="1"/>
+    <rect x="23" y="30" width="2" height="8" rx="1"/>
+    <rect x="27" y="30" width="2" height="8" rx="1"/>
+  </g>
+  
+  <!-- Knife -->
+  <g fill="#D4AF37">
+    <rect x="73" y="25" width="2" height="35" rx="1"/>
+    <rect x="71" y="25" width="6" height="15" rx="1"/>
+  </g>
+  
+  <!-- Plate -->
+  <circle cx="50" cy="55" r="18" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="50" cy="55" r="12" fill="none" stroke="#D4AF37" stroke-width="1"/>
+  
+  <!-- Chef hat on plate -->
+  <g fill="#FFFFFF">
+    <ellipse cx="50" cy="58" rx="8" ry="3"/>
+    <rect x="46" y="48" width="8" height="12" rx="4"/>
+    <circle cx="48" cy="46" r="2"/>
+    <circle cx="52" cy="46" r="2"/>
+    <circle cx="50" cy="44" r="2"/>
+  </g>
+  
+  <!-- Letter G -->
+  <text x="50" y="80" font-family="serif" font-size="16" font-weight="bold" fill="#D4AF37" text-anchor="middle">G</text>
+</svg>
