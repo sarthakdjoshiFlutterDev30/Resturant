@@ -73,12 +73,12 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-black/40" />
         
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl md:text-7xl font-playfair font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-playfair font-bold mb-4 sm:mb-6"
           >
             The Gourmet Table
           </motion.h1>
@@ -86,7 +86,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2"
           >
             Where culinary artistry meets exceptional dining experience
           </motion.p>
@@ -94,12 +94,12 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="space-x-4"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Link to="/contact" className="btn-primary text-lg px-10 py-4">
+            <Link to="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto">
               Book a Table
             </Link>
-            <Link to="/menu" className="btn-secondary text-lg px-10 py-4 inline-block">
+            <Link to="/menu" className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto">
               View Menu
             </Link>
           </motion.div>
@@ -251,11 +251,11 @@ const Home = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
               Reserve your table today and embark on a culinary journey that will delight all your senses
             </p>
-            <div className="space-x-4">
-              <Link to="/contact" className="btn-primary text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 Book Your Table
               </Link>
-              <Link to="/contact" className="btn-secondary text-lg">
+              <Link to="/contact" className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 Contact Us
               </Link>
             </div>

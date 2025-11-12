@@ -32,10 +32,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className={`text-2xl font-playfair font-bold transition-colors duration-300 ${
+            <div className={`text-xl sm:text-2xl font-playfair font-bold transition-colors duration-300 ${
               scrolled ? 'text-gold-400' : 'text-white'
             }`}>
-              The Gourmet Table
+              <span className="hidden sm:inline">The Gourmet Table</span>
+              <span className="sm:hidden">Gourmet Table</span>
             </div>
           </Link>
 

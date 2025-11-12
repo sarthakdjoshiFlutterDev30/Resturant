@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary-900 text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Restaurant Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <h3 className="text-2xl font-playfair font-bold mb-4 text-gold-400">
               The Gourmet Table
             </h3>
